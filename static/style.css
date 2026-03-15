@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 2px 10px black;
+}
+
+.topbar {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #161616;
+}
+
+/* Контейнер для таблиці та графіка */
+.main-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.table-section {
+    flex: 3; /* Таблиця займає більше місця */
+}
+
+.chart-section {
+    flex: 1; /* Графік займає праву частину */
+    min-width: 250px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+button {
+    background: #3ddc84;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.edit { background: #4fc3f7; margin-right: 5px; }
+.delete { background: #ff5252; margin-right: 5px; }
+
+input {
+    background: #222;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th { background: #2a2a2a; padding: 12px; text-align: left; }
+td { padding: 12px; border-bottom: 1px solid #333; }
+tr:hover { background: #222; }
+
+.progress-container { width: 100%; background: #222; height: 6px; position: fixed; top: 0; left: 0; z-index: 100; }
+#progress-bar { width: 0%; height: 100%; background: #3ddc84; transition: width 0.2s; }
+
+/* Стилі для логіна */
+.login-box {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.center { display: flex; align-items: center; justify-content: center; height: 100vh; }
+.login-box input { display: block; width: 250px; margin: 10px auto; }

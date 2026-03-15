@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ISO Archive</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="progress-container"><div id="progress-bar"></div></div>
+    
+    <header>ISO Archive</header>
+
+    <div class="topbar">
+        <input id="search" placeholder="Пошук системи або типу...">
+        {% if role == 'admin' %}
+            <input type="file" id="file">
+            <button onclick="upload()">Завантажити ISO</button>
+        {% endif %}
+        <button onclick="location.href='/logout'" style="background: #777;">Вийти</button>
+    </div>
+
+    <main class="main-container">
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Назва</th><th>Тип</th><th>Арх.</th><th>Біт</th><th>Розмір</th><th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+
+        <div class="chart-section">
+            <h3 style="text-align: center; margin-top: 0;">Диск</h3>
+            <canvas id="diskChart"></canvas>
+        </div>
+    </main>
+
+    <script>
+        // Передаємо роль з Flask в JS
+        const USER_ROLE = "{{ role }}";
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

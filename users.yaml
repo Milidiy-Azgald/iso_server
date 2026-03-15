@@ -1,0 +1,6 @@
+- user: admin
+  pass: admin
+  role: admin
+- user: user1
+  pass: user1
+  role: user
